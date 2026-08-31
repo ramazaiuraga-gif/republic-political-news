@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REPUBLIC — Политическое Обозрение</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">REPUBLIC<span>.</span></div>
+        <button id="adminAuthBtn" class="btn-orange">Вход Админ</button>
+    </header>
+
+    <div id="loginModal" class="modal hidden">
+        <div class="modal-content">
+            <span id="closeLogin" class="close">&times;</span>
+            <h2>Вход в панель управления</h2>
+            <input type="password" id="adminPassword" placeholder="Введите административный пароль">
+            <button id="submitLogin" class="btn-orange">Войти</button>
+        </div>
+    </div>
+
+    <div id="postModal" class="modal hidden">
+        <div class="modal-content">
+            <span id="closePost" class="close">&times;</span>
+            <h2 id="modalTitle">Новая публикация</h2>
+            <input type="hidden" id="postId">
+            <input type="text" id="postTitle" placeholder="Заголовок новости">
+            <input type="text" id="postCategory" placeholder="Категория">
+            <textarea id="postContent" rows="6" placeholder="Текст публикации..."></textarea>
+            <button id="savePostBtn" class="btn-orange">Сохранить</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="adminPanel" class="admin-panel hidden">
+            <span>Вы авторизованы как Администратор</span>
+            <div>
+                <button id="addPostBtn" class="btn-orange">+ Создать запись</button>
+                <button id="logoutBtn" class="btn-white">Выйти</button>
+            </div>
+        </div>
+
+        <main class="feed">
+            <h2>Последние материалы</h2>
+            <div id="postsContainer"></div>
+        </main>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

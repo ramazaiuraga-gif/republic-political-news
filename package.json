@@ -1,0 +1,20 @@
+{
+  "name": "republic-political-news",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "connect-sqlite3": "^0.9.0",
+    "csurf": "^1.11.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.19.2",
+    "express-rate-limit": "^6.7.0",
+    "express-session": "^1.18.0",
+    "express-validator": "^6.15.0",
+    "helmet": "^6.0.1",
+    "sanitize-html": "^2.9.0",
+    "sqlite3": "^5.1.6"
+  }
+}
